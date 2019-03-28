@@ -9,7 +9,9 @@
 </head>
 <body>
 	<figure>
-		<figcaption>诺诺宝贝搞笑视频</figcaption>
+		<div id='text'>
+			<canvas id="cvs1" width="800" height="150">您的浏览器不支持该功能</canvas>
+		</div>
 		<div class="player">
 			<video src="../../../nuo.mp4"></video>
 			<div class="controls">
@@ -27,6 +29,24 @@
 		</div>
 	</figure>
 	<script src="nuo.js"></script>
+	<script>
+		//cvs1
+		var cvs1=document.getElementById('cvs1');
+		var ctx1=cvs1.getContext('2d');
+		//设置阴影属性
+		ctx1.shadowColor='#ECE98E';
+		ctx1.shadowOffsetX=10;
+		ctx1.shadowOffsetY=10;
+		ctx1.shadowBlur=10;
+		// 描边方式绘制文本
+		ctx1.strokeStyle='#F60D0D';
+		ctx1.font='bold italic 40px 微软雅黑';
+		ctx1.strokeText('2019',200,70);
+		// 填充方式绘制文本
+		ctx1.fillStyle='#F60D0D';
+		ctx1.font='bold italic 40px 微软雅黑';
+		ctx1.fillText('诺诺宝贝搞笑视频Yeah!',200,130);
+	</script>
 </body>
 
 </html>
